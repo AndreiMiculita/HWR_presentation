@@ -1,0 +1,119 @@
+\documentclass[table]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{graphicx}
+\usepackage{xifthen}
+\usepackage{tikz} 
+\usepackage{qtree}
+\usepackage{soul}
+\usepackage[toc,page]{appendix}
+\usepackage{qtree}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{soul}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  allcolors=.,
+  urlcolor=blue,
+}
+
+\newdimen\m
+\setbox0=\hbox{\begin{tabular}{r@{}|}\end{tabular}}
+\m=-\wd0
+
+\newdimen\fitchargone   \fitchargone 3.5in
+\newdimen\fitchone   \fitchone 2.5in
+\newdimen\fitchtwo   \fitchtwo 0pt
+\newdimen\fitchthree \fitchthree=\fitchtwo
+\advance\fitchthree by 10pt
+
+\newcommand{\fitchmain}[1]{\advance \fitchone by -\fitchthree%
+\hspace{\m}\begin{tabular}[t]{r@{}|p{\fitchone}@{}l}
+  \phantom{\slider} & & \\[-1.75ex]
+  #1 \\[-1.75ex] & &
+  \end{tabular}}
+
+\newcommand{\fitch}[2]{\advance \fitchone by -\fitchthree%
+\hspace*{.35em}\begin{tabular}[t]{|p{\fitchtwo}@{}p{\fitchone}@{}l}
+  \multicolumn{3}{@{}l@{}}{\ }\\[-2.35ex]
+   #1 \\
+   \ \\[-2.5ex] \cline{1-1}\\[-2ex]
+   #2 \\ \multicolumn{3}{@{}l@{}} \ \\[-2.35ex]
+  \end{tabular}}
+
+\setbeamertemplate{frametitle}[default][center]
+\usetheme[compress]{Ilmenau}
+\usecolortheme{beaver}
+
+\defbeamertemplate*{headline}{miniframes theme no subsection}
+{%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}{section in head/foot}
+        \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+    \end{beamercolorbox}
+}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+%Information to be included in the title page:
+\title{Handwriting Recognition\\
+Project Plan and Description\\
+Team 15: \textit{Global Minimum}}
+
+\author{Andrei Miculita (s4161947) \and Prajakta Shouche (S3071723) \and Marten De Vries (s2974797)}
+
+\institute{University of Groningen}
+\date{May 2020}
+ 
+ 
+\begin{document}
+
+% By default it would be bubbles with gradients
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[circle]
+
+\frame{\titlepage}
+
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Tasks}
+    \begin{enumerate}
+        \item Preprocessing and character segmentation: Andrei
+        \item Character recognition: Prajakta
+        \item Style based classification: Marten
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Schedule}
+    \begin{itemize}
+        \item May 20th: Character segmentation prototype
+        \item May 27th: Methods
+        \item June 3rd: Prototype character classification
+        \item June 10th: Prototype style classification
+        \item June 17th: Results + full prototype
+        \item June 28th: Deadline code
+        \item July 5th: Deadline report
+    \end{itemize}
+\end{frame}
+
+
+
+\end{document}
